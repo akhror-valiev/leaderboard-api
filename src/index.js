@@ -5,11 +5,11 @@ const scoreList = document.querySelector('.score-list');
 const infoData = [
   {
     name: 'Max',
-    score: 80,
+    score: 90,
   },
   {
     name: 'Ann',
-    score: 75,
+    score: 78,
   },
   {
     name: 'Lucy',
