@@ -1,27 +1,35 @@
 import './style.css';
+// eslint-disable-next-line import/no-cycle
+import { sendData, fetchData } from './projectApi.js';
 
-const scoreList = document.querySelector('.score-list');
+export const scoreList = document.querySelector('.score-list');
+const inputName = document.querySelector('.name');
+const inputScore = document.querySelector('.score');
+const refBtn = document.querySelector('.btn');
+const btnForm = document.querySelector('.btn-form');
 
-const infoData = [
-  {
-    name: 'Max',
-    score: 90,
-  },
-  {
-    name: 'Ann',
-    score: 78,
-  },
-  {
-    name: 'Lucy',
-    score: 60,
-  },
-];
-
-const populateList = (data) => {
+export const populateList = (data) => {
   data.forEach((n) => {
-    const textHtml = `<p class="score-num">${n.name}: ${n.score}</p>`;
+    const textHtml = `<p class="score-num">${n.user}: ${n.score}</p>`;
     scoreList.insertAdjacentHTML('afterbegin', textHtml);
   });
 };
 
-populateList(infoData);
+const addScore = () => {
+  sendData(inputName.value, inputScore.value);
+  inputName.value = '';
+  inputScore.value = '';
+};
+
+window.onload = () => {
+  fetchData();
+
+  btnForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    addScore();
+  });
+  refBtn.addEventListener('click', () => {
+    scoreList.innerHTML = '';
+    fetchData();
+  });
+};
