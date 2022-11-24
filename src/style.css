@@ -24,13 +24,14 @@ h1 {
 
 main {
   display: flex;
-  gap: 100px;
+  gap: 20px;
 }
 
 section .recent-score {
   display: flex;
-  gap: 20px;
   padding: 2rem;
+  width: 500px;
+  justify-content: center;
 }
 
 .recent-score h2 {
@@ -48,6 +49,11 @@ section .score-list {
   margin: 0.6rem 2rem;
   border: 1px solid black;
   padding-inline: 5px;
+  overflow: hidden;
+}
+
+.score-num {
+  max-width: 500px;
 }
 
 .score-num:nth-child(2n) {
