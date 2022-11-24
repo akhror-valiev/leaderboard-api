@@ -20,6 +20,11 @@ body {
 h1 {
   color: blueviolet;
   font-size: 60px;
+  text-align: center;
+}
+
+.uil-trophy {
+  color: rgb(255, 174, 0);
 }
 
 main {
@@ -29,35 +34,50 @@ main {
 
 section .recent-score {
   display: flex;
-  padding: 2rem;
+  padding: 2rem 0;
   width: 500px;
-  justify-content: center;
+  position: relative;
+  align-items: center;
 }
 
 .recent-score h2 {
   font-size: 32px;
+  color: blueviolet;
 }
 
 .recent-score .btn {
   margin: auto;
   padding: 5px;
   font-family: "Patrick Hand", cursive;
-  font-weight: 700;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
 }
 
 section .score-list {
-  margin: 0.6rem 2rem;
-  border: 1px solid black;
-  padding-inline: 5px;
   overflow: hidden;
+  border: none;
 }
 
 .score-num {
   max-width: 500px;
+  font-size: 18px;
+  color: blueviolet;
 }
 
 .score-num:nth-child(2n) {
-  background-color: lightgray;
+  background-color: rgb(220, 207, 231);
+}
+
+p .uil-star {
+  color: rgb(255, 174, 0);
+}
+
+p .uil-user-circle {
+  color: rgb(255, 174, 0);
 }
 
 section .add-score-container {
@@ -66,6 +86,7 @@ section .add-score-container {
 
 .add-score-container h2 {
   font-size: 32px;
+  color: blueviolet;
 }
 
 form {
@@ -76,7 +97,33 @@ form {
 }
 
 form input {
-  padding: 5px 20px;
+  padding: 6px 24px;
+  border: none;
+  border-bottom: 2px solid blueviolet;
+  outline: none;
+}
+
+.form-input-name {
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+
+.form-input-name i {
+  font-size: 22px;
+  color: rgb(255, 174, 0);
+  position: absolute;
+}
+
+.form-input-score {
+  display: flex;
+  position: relative;
+}
+
+.form-input-score i {
+  font-size: 22px;
+  color: rgb(255, 174, 0);
+  position: absolute;
 }
 
 form .btn-form {
@@ -84,4 +131,7 @@ form .btn-form {
   padding: 5px;
   font-family: "Patrick Hand", cursive;
   font-weight: 700;
+  background-color: blueviolet;
+  color: white;
+  border: none;
 }
