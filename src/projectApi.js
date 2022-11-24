@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import { populateList } from './index.js';
 
 const renderInfo = document.querySelector('.render-info');
