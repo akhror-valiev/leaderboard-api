@@ -10,7 +10,7 @@ const btnForm = document.querySelector('.btn-form');
 
 const populateList = (data) => {
   data.forEach((n) => {
-    const textHtml = `<p class="score-num">${n.user}: ${n.score}</p>`;
+    const textHtml = `<p class="score-num"><i class="uil uil-user-circle"></i>${n.user}<i class="uil uil-star"></i>${n.score}</p>`;
     scoreList.insertAdjacentHTML('afterbegin', textHtml);
   });
 };

@@ -6,12 +6,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>Leaderboard List</title>
 <script defer src="index.bundle.js"></script></head>
 
 <body>
-    <header>
-        <h1 class="lead-header">Leaderboard</h1>
+
+    <h1 class="lead-header"><i class="uil uil-trophy"></i></i>Leaderboard</h1>
+
     </header>
     <main>
         <section class="first-section">
@@ -25,8 +27,14 @@
             <div class="add-score-container">
                 <h2>Add your score</h2>
                 <form action="">
-                    <input class="name" type="text" placeholder="username" />
-                    <input class="score" type="text" placeholder="score" />
+                    <div class="form-input-name">
+                        <i class="uil uil-user-circle"></i>
+                        <input class="name" type="text" placeholder="username" />
+                    </div>
+                    <div class="form-input-score">
+                        <i class="uil uil-star"></i>
+                        <input class="score" type="text" placeholder="score" />
+                    </div>
                     <button class="btn-form">Submit</button>
                 </form>
                 <div class="render-info"></div>
